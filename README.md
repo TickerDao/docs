@@ -1,6 +1,6 @@
-# Token Name Service Docs
+# Token Name Service | Documentation
 
-The Basics
+### The Basics
 
 The Token Name Service uses ENS, and can be queried anywhere .eth domains are supported
 
