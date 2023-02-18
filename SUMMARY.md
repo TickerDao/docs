@@ -1,5 +1,5 @@
 # Table of contents
 
-* [Introduction](README.md)
-* [Quickstart](quickstart.md)
+* [Quickstart](README.md)
+* [Introduction](<README (1).md>)
 * [Dataset](dataset.md)
