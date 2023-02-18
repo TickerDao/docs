@@ -90,6 +90,12 @@ NEAR | `near_address`\
 Solana | `sol_address`\
 **Example:** 3NZ9JMVBmGAqocybic2c7LQCJScmgsAZ6vQqTDzcqmJh
 
+Tron | `trx_address`\
+**Example:** TXpw8XeWYeTUd4quDskoUqeQPowRh4jY65
+
+Ziliqa | `zil_address`\
+**Example:** zil1wha8mzaxhm22dpm5cav2tepuldnr8kwkvmqtjq
+
 
 
 ``
