@@ -28,28 +28,33 @@ web3.eth.ens.getAddress('uni.tkn.eth').then(function (address) {
 {% endtab %}
 
 {% tab title="Solidity" %}
-```solidity
-pragma solidity ^0.8.4;
+Use `tns.addressFor(tickerSymbol)` to return the token contract address:
+
+<pre class="language-solidity"><code class="lang-solidity">pragma solidity ^0.8.4;
 
 contract HelloTicker {
-    ITicker ticker;
+    TNS tns;
     constructor() {
-        ticker = ITicker(0x8F5007bCDC1870531029C194b31AE1e6005bc30d); 
+        tns = TNS(0x8F5007bCDC1870531029C194b31AE1e6005bc30d); 
     }
     
     // Get an account's balance from a ticker symbol
     function balanceForAddress(address user, string calldata tickerSymbol) public view returns (uint) {
 	// Fetch the token contract address with ticker:
-	address contractAddress = ticker.addressFor(tickerSymbol);
+	
+	// ***  
+<strong>	address contractAddress = tns.addressFor(tickerSymbol);
+</strong>	// *** 
+	
         IERC20 tokenContract = IERC20(contractAddress);
         return tokenContract.balanceOf(user);
     }
 }
 // Required Interfaces
-interface ITicker {
+interface TNS {
     struct Metadata {
         address contractAddress;
-		string name;
+	string name;
         string url;
         string avatar;
         string description;
@@ -67,7 +72,6 @@ interface IERC20 {
     function balanceOf(address account) external view returns (uint256);
     function transfer(address recipient, uint256 amount) external returns (bool);
 } 
-
-```
+</code></pre>
 {% endtab %}
 {% endtabs %}
