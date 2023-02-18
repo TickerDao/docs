@@ -1,5 +1,5 @@
 ---
-description: A description of each token's metadata maintained by TNS
+description: A description of the metadata maintained by TNS, for each token
 ---
 
 # Dataset
