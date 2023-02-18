@@ -49,6 +49,18 @@ The name of the GitHub organization used by the project\
 A decentralized IPFS, IPNS, Swarm, or Arweave hash, used by browsers to resolve web pages with decentralized hosting.\
 **Example:** bafybeiaqs3f3wcfln2ieej2wk6emuqcnc6rixahiv4ruqvjlmxlrkhaqdq
 
+## `update`
+
+A monotonically increasing versioning identifier, that increases when a token's metadata is updated.&#x20;
+
+X.0.0 is increased when a ticker ($XXX) is changed, \
+0.X.0 is increased when a contract address is changed, \
+0.0.X is increased when token metadata is updated.&#x20;
+
+If a more significant number is changed, all the numbers under it are reset. The starting version is 0.0.1
+
+**Example:** 0.1.3 - The first version of a token, on it's second token contract address, under which, the metadata has been updated twice.
+
 ## Sidechain Addresses
 
 The token's contract addresses for EVM and non-EVM chains.&#x20;
@@ -91,7 +103,3 @@ Tron | `trx_address`\
 
 Ziliqa | `zil_address`\
 **Example:** zil1wha8mzaxhm22dpm5cav2tepuldnr8kwkvmqtjq
-
-
-
-``
