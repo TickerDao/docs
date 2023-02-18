@@ -28,7 +28,9 @@ web3.eth.ens.getAddress('uni.tkn.eth').then(function (address) {
 {% endtab %}
 
 {% tab title="Solidity" %}
-Use `tns.addressFor(tickerSymbol)` to return the token contract address:
+Use `tns.addressFor(tickerSymbol)` to return the token contract address.&#x20;
+
+See a deployable example contract below:
 
 <pre class="language-solidity"><code class="lang-solidity">pragma solidity ^0.8.4;
 
@@ -42,10 +44,8 @@ contract HelloTicker {
     function balanceForAddress(address user, string calldata tickerSymbol) public view returns (uint) {
 	// Fetch the token contract address with ticker:
 	
-	// ***  
 <strong>	address contractAddress = tns.addressFor(tickerSymbol);
-</strong>	// *** 
-	
+</strong>	
         IERC20 tokenContract = IERC20(contractAddress);
         return tokenContract.balanceOf(user);
     }
