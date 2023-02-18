@@ -4,10 +4,6 @@ description: A description of the token metadata maintained by TNS
 
 # Dataset
 
-## Token Metadata
-
-The data types maintained by TNS that can be queried for each token&#x20;
-
 ## `name`
 
 A short string containing the name of the project\
@@ -55,7 +51,7 @@ A decentralized IPFS, IPNS, Swarm, or Arweave hash, used by browsers to resolve 
 
 ## Sidechain Addresses
 
-Token contract addresses for EVM and non-EVM chains.&#x20;
+The token's contract addresses for EVM and non-EVM chains.&#x20;
 
 ### EVM Networks:
 
