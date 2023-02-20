@@ -4,6 +4,8 @@ description: A description of the metadata maintained by TNS for each token
 
 # Dataset
 
+Below are detailed descriptions of each item in the TNS dataset, including `name, description, avatar, url, contractAddress, decimals, twitter, github, dweb, update,` and various sidechain contract addresses.
+
 ## `name`
 
 A short string containing the name of the project\
