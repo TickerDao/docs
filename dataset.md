@@ -1,8 +1,6 @@
----
-description: A description of the metadata maintained by TNS for each token
----
-
 # Dataset
+
+Dataset page
 
 Below are detailed descriptions and rules for each item in the TNS dataset, including `name, description, avatar, url, contractAddress, decimals, twitter, github, dweb, update,` and various sidechain contract addresses.
 
