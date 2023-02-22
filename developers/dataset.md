@@ -94,10 +94,6 @@ Gnosis Chain | `gno_address`
 
 Polygon | `matic_address`
 
-Goerli Testnet | goerli`_address`
-
-Sepolia Testnet | sepolia`_address`
-
 ### Non-EVM Networks:
 
 Networks that don't conform to the EVM standard
