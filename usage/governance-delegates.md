@@ -4,4 +4,6 @@ description: Governance Delegate Use Cases
 
 # Governance Delegates
 
-Governance Delegate Use Cases
+#### TKN Ambassador
+
+Help onboard your community and maintain updates for your token to receive TKN incentives.

@@ -4,4 +4,4 @@ description: Whitepaper
 
 # Whitepaper
 
-Whitepaper
+Coming soon.
