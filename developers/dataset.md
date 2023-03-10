@@ -55,7 +55,7 @@ The name of the GitHub organization used by the project\
 A decentralized IPFS, IPNS, Swarm, or Arweave hash, used by browsers to resolve web pages with decentralized hosting.\
 **Example:** bafybeiaqs3f3wcfln2ieej2wk6emuqcnc6rixahiv4ruqvjlmxlrkhaqdq
 
-## `update`
+## `version`
 
 A monotonically increasing versioning identifier, that increases when a token's metadata is updated.&#x20;
 
@@ -93,6 +93,10 @@ Fantom | `ftm_address`
 Gnosis Chain | `gno_address`
 
 Polygon | `matic_address`
+
+Goerli Testnet | goerli`_address`
+
+Sepolia Testnet | sepolia`_address`
 
 ### Non-EVM Networks:
 
