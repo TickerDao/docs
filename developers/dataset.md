@@ -30,6 +30,11 @@ A public URL linking to the project's logo image, hosted on IPFS. Developers can
 The URL of the main website used by the project\
 **Example:** [https://wbtc.network/](https://wbtc.network/)
 
+## `notice`
+
+Notification and context around token data changes\
+**Example:** `LEND is migrating to AAVE, at a rate of 100 LEND to 1 AAVE. The migration interface can be viewed at` [`https://app-v1.aave.com/migration-portal`](https://app-v1.aave.com/migration-portal)
+
 ## `contractAddress`
 
 The hex address of the token contract on Ethereum mainnet. Tokens may reside on other chains, or have their own blockspace, in which case this field may be blank. Tokens may have multiple addresses on multiple chains. If so, see sidechain address fields below.\
