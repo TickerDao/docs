@@ -269,8 +269,8 @@ contract HelloTKN {
     }
 	
     // Get the full dataset for a ticker 
-    function dataForTicker(string calldata tickerSymbol) public view returns (ITicker.Metadata memory info) {
-        ITKN.TokenInfo memory data = tkn.infoFor(tickerSymbol);
+    function dataForTicker(string calldata tickerSymbol) public view returns (ITKN.Metadata memory info) {
+        ITKN.Metadata memory data = tkn.dataFor(tickerSymbol);
         return data;
     }
 }
