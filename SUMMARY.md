@@ -10,7 +10,7 @@
 ## Developers
 
 * [Dataset](developers/dataset.md)
-* [Querying the TNS Dataset](developers/querying-the-tns-dataset.md)
+* [Querying the Dataset](developers/querying-the-tns-dataset.md)
 
 ## Usage
 
