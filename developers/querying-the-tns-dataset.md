@@ -1,4 +1,4 @@
-# Querying the TNS Dataset
+# Querying the Dataset
 
 ## Documentation
 
@@ -10,7 +10,7 @@ For instance, the contract for USDC can be found at [usdc.tkn.eth](https://ether
 
 Descriptive metadata can be found on chain in each token's ENS resolver. Including **name, description, avatar, url, decimals, twitter, & github**.
 
-The Ticker.sol contract exposes additional queries; such as: fetch all metadata, and token balance for address. Ticker.sol is hosted at [tkn.eth](https://etherscan.io/address/tkn.eth#code)
+The Ticker.sol contract exposes additional queries; such as: fetch all metadata, and token balance for address. TNS.sol is hosted at [tkn.eth](https://etherscan.io/address/tkn.eth#code)
 
 ### Quickstart
 
