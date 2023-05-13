@@ -50,8 +50,8 @@ contract HelloTicker {
     
     // Get an account's balance from a ticker symbol
     function balanceForAddress(address user, string calldata tickerSymbol) public view returns (uint) {
-		// Fetch the token contract address with ticker:
-		address contractAddress = ticker.addressFor(tickerSymbol);
+	// Fetch the token contract address with ticker:
+	address contractAddress = ticker.addressFor(tickerSymbol);
         IERC20 tokenContract = IERC20(contractAddress);
         return tokenContract.balanceOf(user);
     }
