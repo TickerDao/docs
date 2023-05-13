@@ -350,6 +350,105 @@ interface IERC20 {
 {% endtab %}
 {% endtabs %}
 
+**Get all sidechain contract addresses**
+
+Retrieve all token sidechain contract addresses.
+
+Useful for a token's contract addresses for all chains in a single query.
+
+{% tabs %}
+{% tab title="Solidity" %}
+```solidity
+pragma solidity ^0.8.4;
+
+contract HelloTKN {
+    ITKN tkn;
+    constructor() {
+        tkn = ITKN(0xc11BA824ab2cEA5E701831AB87ed43eb013902Dd); 
+    }
+	
+    // Get the full dataset for a ticker 
+    function addressesForTicker(string calldata tickerSymbol) public view returns (ITKN.TokenAddresses memory info) {
+        ITKN.TokenAddresses memory data = tkn.addressesFor(tickerSymbol);
+        return data;
+    }
+}
+// Required Interfaces
+interface ITKN {
+    struct Metadata {
+        address contractAddress;
+        string name;
+        string url;
+        string avatar;
+        string description;
+        string notice;
+        string version;
+        string decimals;
+        string twitter;
+        string github;
+        bytes dweb;
+        address payable arb1_address;
+        address payable avaxc_address;
+        address payable base_address;
+        address payable bsc_address;
+        address payable cro_address;
+        address payable ftm_address;
+        address payable gno_address;
+        address payable matic_address;
+        bytes near_address;
+        address payable op_address;
+        bytes sol_address;
+        bytes trx_address;
+        bytes zil_address; 
+        address payable goerli_address; 
+        address payable sepolia_address; 
+    }
+    struct TokenInfo {
+        address contractAddress;
+        string name;
+        string url;
+        string avatar;
+        string description;
+        string notice;
+        string version;
+        string decimals;
+        string twitter;
+        string github;
+        bytes dweb;
+    }
+    struct TokenAddresses {
+        address payable arb1_address;
+        address payable avaxc_address;
+        address payable base_address;
+        address payable bsc_address;
+        address payable cro_address;
+        address payable ftm_address;
+        address payable gno_address;
+        address payable matic_address;
+        bytes near_address;
+        address payable op_address;
+        bytes sol_address;
+        bytes trx_address;
+        bytes zil_address; 
+        address payable goerli_address; 
+        address payable sepolia_address; 
+    }
+    function addressFor(string calldata _name) external view returns (address);
+    function infoFor(string calldata _name) external view returns (TokenInfo memory);
+    function addressesFor(string calldata _name) external view returns (TokenAddresses memory);
+    function dataFor(string calldata _name) external view returns (Metadata memory);
+    function gasEfficientFetch(bytes32 namehash) external view returns (address);
+    function balanceWithTicker(address user, string calldata tickerSymbol) external view returns (uint);
+}
+
+interface IERC20 {
+    function balanceOf(address account) external view returns (uint256);
+    function transfer(address recipient, uint256 amount) external returns (bool);
+} 
+```
+{% endtab %}
+{% endtabs %}
+
 **Get tokens owned by an address**
 
 Lookup how many tokens an address owns, using a token symbol.
