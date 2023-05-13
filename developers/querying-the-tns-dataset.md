@@ -85,7 +85,7 @@ interface IERC20 {
 {% endtab %}
 {% endtabs %}
 
-**Get single datapoint**
+#### **Get single datapoint**
 
 Get one of the datapoints available for each token.
 
@@ -156,7 +156,7 @@ interface IERC20 {
 {% endtab %}
 {% endtabs %}
 
-**Get all token info**
+#### **Get all token info**
 
 Retrieve all datapoints for a token, excluding the sidechain contract addresses.
 
@@ -251,7 +251,7 @@ interface IERC20 {
 {% endtab %}
 {% endtabs %}
 
-**Get all token info and sidechain contract addresses**
+#### **Get all token info and sidechain contract addresses**
 
 Retrieve all token info and it's sidechain contract addresses.
 
@@ -386,7 +386,7 @@ interface IERC20 {
 {% endtab %}
 {% endtabs %}
 
-**Get all sidechain contract addresses**
+#### **Get all sidechain contract addresses**
 
 Retrieve all token sidechain contract addresses.
 
@@ -509,7 +509,7 @@ interface IERC20 {
 {% endtab %}
 {% endtabs %}
 
-**Get tokens owned by an address**
+#### **Get tokens owned by an address**
 
 Lookup how many tokens an address owns, using a token symbol.
 
