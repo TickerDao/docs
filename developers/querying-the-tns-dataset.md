@@ -58,17 +58,18 @@ contract HelloTKN {
 }
 // Required Interfaces
 interface ITKN {
-    struct Metadata {
+    struct TokenInfo {
         address contractAddress;
-	string name;
+        string name;
         string url;
         string avatar;
         string description;
         string notice;
+        string version;
+        string decimals;
         string twitter;
         string github;
-        string decimals;
-	string version;
+        bytes dweb;
     }
     function addressFor(string calldata _name) external view returns (address);
     function infoFor(string calldata _name) external view returns (Metadata memory);
@@ -128,17 +129,18 @@ contract HelloTKN {
 }
 // Required Interfaces
 interface ITKN {
-    struct Metadata {
+    struct TokenInfo {
         address contractAddress;
-	string name;
+        string name;
         string url;
         string avatar;
         string description;
         string notice;
+        string version;
+        string decimals;
         string twitter;
         string github;
-        string decimals;
-	string version;
+        bytes dweb;
     }
     function addressFor(string calldata _name) external view returns (address);
     function infoFor(string calldata _name) external view returns (Metadata memory);
@@ -156,7 +158,7 @@ interface IERC20 {
 
 **Get all token info**
 
-Retrieve all datapoints for a token.
+Retrieve all datapoints for a token, excluding the sidechain contract addresses.
 
 Useful for fetching all token data in a single query.
 
@@ -177,7 +179,8 @@ let data = await tkn.infoFor("uni")
 // data.notice: ""
 // data.version: "0.0.3"
 // data.decimals: "18"
-
+// data.dweb: 0xe301017012201096cbbb08ab6e904227565788ca404d17a28b80e8af2348552b65d7151c101c
+// (Convert dweb-bytes to IPFS CID with npm 'content-hash': https://github.com/pldespaigne/content-hash#contenthashdecode-contenthash----string)
 ```
 {% endtab %}
 
@@ -198,6 +201,8 @@ const info = await contract.methods.infoFor("uni").call()
 // data.notice: ""
 // data.version: "0.0.3"
 // data.decimals: "18"
+// data.dweb: 0xe301017012201096cbbb08ab6e904227565788ca404d17a28b80e8af2348552b65d7151c101c
+// (Convert dweb-bytes to IPFS CID with npm 'content-hash': https://github.com/pldespaigne/content-hash#contenthashdecode-contenthash----string)
 ```
 {% endtab %}
 
@@ -213,23 +218,24 @@ contract HelloTKN {
 	
     // Get the full dataset for a ticker 
     function dataForTicker(string calldata tickerSymbol) public view returns (ITicker.Metadata memory info) {
-        ITKN.Metadata memory data = tkn.infoFor(tickerSymbol);
+        ITKN.TokenInfo memory data = tkn.infoFor(tickerSymbol);
         return data;
     }
 }
 // Required Interfaces
 interface ITKN {
-    struct Metadata {
+    struct TokenInfo {
         address contractAddress;
-	string name;
+        string name;
         string url;
         string avatar;
         string description;
         string notice;
+        string version;
+        string decimals;
         string twitter;
         string github;
-        string decimals;
-	string version;
+        bytes dweb;
     }
     function addressFor(string calldata _name) external view returns (address);
     function infoFor(string calldata _name) external view returns (Metadata memory);
@@ -245,7 +251,59 @@ interface IERC20 {
 {% endtab %}
 {% endtabs %}
 
-**Get tokens owned by token symbol**
+**Get all token info**
+
+Retrieve all meta datapoints for a token.
+
+Useful for fetching all token data in a single query.
+
+{% tabs %}
+{% tab title="Solidity" %}
+```solidity
+pragma solidity ^0.8.4;
+
+contract HelloTKN {
+    ITKN tkn;
+    constructor() {
+        tkn = ITKN(0xc11BA824ab2cEA5E701831AB87ed43eb013902Dd); 
+    }
+	
+    // Get the full dataset for a ticker 
+    function dataForTicker(string calldata tickerSymbol) public view returns (ITicker.Metadata memory info) {
+        ITKN.TokenInfo memory data = tkn.infoFor(tickerSymbol);
+        return data;
+    }
+}
+// Required Interfaces
+interface ITKN {
+    struct TokenInfo {
+        address contractAddress;
+        string name;
+        string url;
+        string avatar;
+        string description;
+        string notice;
+        string version;
+        string decimals;
+        string twitter;
+        string github;
+        bytes dweb;
+    }
+    function addressFor(string calldata _name) external view returns (address);
+    function infoFor(string calldata _name) external view returns (Metadata memory);
+    function gasEfficientFetch(bytes32 namehash) external view returns (address);
+    function balanceWithTicker(address user, string calldata tickerSymbol) external view returns (uint);
+}
+
+interface IERC20 {
+    function balanceOf(address account) external view returns (uint256);
+    function transfer(address recipient, uint256 amount) external returns (bool);
+} 
+```
+{% endtab %}
+{% endtabs %}
+
+**Get tokens owned by an address**
 
 Lookup how many tokens an address owns, using a token symbol.
 
@@ -290,17 +348,18 @@ contract HelloTKN {
 }
 // Required Interfaces
 interface ITKN {
-    struct Metadata {
+    struct TokenInfo {
         address contractAddress;
-	string name;
+        string name;
         string url;
         string avatar;
         string description;
         string notice;
+        string version;
+        string decimals;
         string twitter;
         string github;
-        string decimals;
-	string version;
+        bytes dweb;
     }
     function addressFor(string calldata _name) external view returns (address);
     function infoFor(string calldata _name) external view returns (Metadata memory);
