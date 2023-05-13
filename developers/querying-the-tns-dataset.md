@@ -259,7 +259,39 @@ Useful for fetching all known data about a token in a single query.
 
 {% tabs %}
 {% tab title="Ethers.js" %}
-
+```
+let abi = [{"inputs":[],"stateMutability":"nonpayable","type":"constructor"},{"inputs":[{"internalType":"string","name":"_name","type":"string"}],"name":"addressFor","outputs":[{"internalType":"address","name":"","type":"address"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"string","name":"_name","type":"string"}],"name":"addressesFor","outputs":[{"components":[{"internalType":"address payable","name":"arb1_address","type":"address"},{"internalType":"address payable","name":"avaxc_address","type":"address"},{"internalType":"address payable","name":"base_address","type":"address"},{"internalType":"address payable","name":"bsc_address","type":"address"},{"internalType":"address payable","name":"cro_address","type":"address"},{"internalType":"address payable","name":"ftm_address","type":"address"},{"internalType":"address payable","name":"gno_address","type":"address"},{"internalType":"address payable","name":"matic_address","type":"address"},{"internalType":"bytes","name":"near_address","type":"bytes"},{"internalType":"address payable","name":"op_address","type":"address"},{"internalType":"bytes","name":"sol_address","type":"bytes"},{"internalType":"bytes","name":"trx_address","type":"bytes"},{"internalType":"bytes","name":"zil_address","type":"bytes"},{"internalType":"address payable","name":"goerli_address","type":"address"},{"internalType":"address payable","name":"sepolia_address","type":"address"}],"internalType":"struct TNS.TokenAddresses","name":"","type":"tuple"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"address","name":"user","type":"address"},{"internalType":"string","name":"tickerSymbol","type":"string"}],"name":"balanceWithTicker","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"string","name":"_name","type":"string"}],"name":"dataFor","outputs":[{"components":[{"internalType":"address","name":"contractAddress","type":"address"},{"internalType":"string","name":"name","type":"string"},{"internalType":"string","name":"url","type":"string"},{"internalType":"string","name":"avatar","type":"string"},{"internalType":"string","name":"description","type":"string"},{"internalType":"string","name":"notice","type":"string"},{"internalType":"string","name":"version","type":"string"},{"internalType":"string","name":"decimals","type":"string"},{"internalType":"string","name":"twitter","type":"string"},{"internalType":"string","name":"github","type":"string"},{"internalType":"bytes","name":"dweb","type":"bytes"},{"internalType":"address payable","name":"arb1_address","type":"address"},{"internalType":"address payable","name":"avaxc_address","type":"address"},{"internalType":"address payable","name":"base_address","type":"address"},{"internalType":"address payable","name":"bsc_address","type":"address"},{"internalType":"address payable","name":"cro_address","type":"address"},{"internalType":"address payable","name":"ftm_address","type":"address"},{"internalType":"address payable","name":"gno_address","type":"address"},{"internalType":"address payable","name":"matic_address","type":"address"},{"internalType":"bytes","name":"near_address","type":"bytes"},{"internalType":"address payable","name":"op_address","type":"address"},{"internalType":"bytes","name":"sol_address","type":"bytes"},{"internalType":"bytes","name":"trx_address","type":"bytes"},{"internalType":"bytes","name":"zil_address","type":"bytes"},{"internalType":"address payable","name":"goerli_address","type":"address"},{"internalType":"address payable","name":"sepolia_address","type":"address"}],"internalType":"struct TNS.Metadata","name":"","type":"tuple"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"bytes32","name":"namehash","type":"bytes32"}],"name":"gasEfficientFetch","outputs":[{"internalType":"address","name":"","type":"address"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"uint256","name":"_chainId","type":"uint256"},{"internalType":"string","name":"_name","type":"string"}],"name":"getContractForChain","outputs":[{"internalType":"bytes","name":"","type":"bytes"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"string","name":"_name","type":"string"}],"name":"infoFor","outputs":[{"components":[{"internalType":"address","name":"contractAddress","type":"address"},{"internalType":"string","name":"name","type":"string"},{"internalType":"string","name":"url","type":"string"},{"internalType":"string","name":"avatar","type":"string"},{"internalType":"string","name":"description","type":"string"},{"internalType":"string","name":"notice","type":"string"},{"internalType":"string","name":"version","type":"string"},{"internalType":"string","name":"decimals","type":"string"},{"internalType":"string","name":"twitter","type":"string"},{"internalType":"string","name":"github","type":"string"},{"internalType":"bytes","name":"dweb","type":"bytes"}],"internalType":"struct TNS.TokenInfo","name":"","type":"tuple"}],"stateMutability":"view","type":"function"}];
+let tkn = new ethers.Contract("tkn.eth", abi, provider)
+let data = await tkn.dataFor("uni")
+// Returns an object with all token data: 
+// data.name: "Uniswap"
+// data.avatar: "https://bafybeiclyzf4rogl67kd42ss2z2mnf4o3pf5s2aginvsxk7iomlelxhsdi.ipfs.dweb.link/"
+// data.contractAddress: "0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984"
+// data.description: "Protocol used to exchange cryptocurrencies and tokens"
+// data.url: "https://app.uniswap.org/"
+// data.github: "Uniswap"
+// data.twitter: "uniswap"
+// data.notice: ""
+// data.version: "0.0.3"
+// data.decimals: "18"
+// data.dweb: 0xe301017012201096cbbb08ab6e904227565788ca404d17a28b80e8af2348552b65d7151c101c
+// (Convert dweb-bytes to IPFS CID with npm 'content-hash': https://github.com/pldespaigne/content-hash#contenthashdecode-contenthash----string)
+// data.arb1_address: "0xFa7F8980b0f1E64A2062791cc3b0871572f1F7f0"
+// data.avaxc_address: "0x8eBAf22B6F053dFFeaf46f4Dd9eFA95D89ba8580"
+// data.base_addres: 
+// data.bsc_address: "0xBf5140A22578168FD562DCcF235E5D43A02ce9B1"
+// data.cro_address: 
+// data.ftm_address: 
+// data.gno_address: "0x4537e328Bf7e4eFA29D05CAeA260D7fE26af9D74"
+// data.matic_address: "0xb33EaAd8d922B1083446DC23f610c2567fB5180f"
+// data.near_address: "1f9840a85d5af5bf1d1762f925bdaddc4201f984.factory.bridge.near"
+// data.op_address: "0x6fd9d7AD17242c41f7131d257212c54A0e816691"
+// data.sol_address: 
+// data.trx_address: 
+// data.zil_address: 
+// data.goerli_address:  
+// data.sepolia_address:  
+```
 {% endtab %}
 
 {% tab title="Solidity" %}
