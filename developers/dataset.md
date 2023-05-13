@@ -118,3 +118,12 @@ Tron | `trx_address`\
 
 Ziliqa | `zil_address`\
 **Example:** zil1wha8mzaxhm22dpm5cav2tepuldnr8kwkvmqtjq
+
+## Upcoming Datapoints:
+
+Future datapoints that will be added to the dataset
+
+## `tokenSupply`
+
+The total number of tokens created for a project\
+**Example:** 10000000
