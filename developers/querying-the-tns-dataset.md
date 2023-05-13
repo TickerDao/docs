@@ -8,7 +8,7 @@ The Token name set is persisted as subdomains of the **.tkn.eth** domain
 
 For instance, the contract for USDC can be found at [usdc.tkn.eth](https://etherscan.io/address/usdc.tkn.eth) and Wrapped Bitcoin at [wbtc.tkn.eth](https://etherscan.io/address/wbtc.tkn.eth)
 
-Descriptive metadata can be found on chain in each token's ENS resolver. Including **name, description, avatar, url, decimals, twitter, & github**.
+Descriptive metadata can be found on chain in each token's ENS resolver. Including **name, description, avatar, url, dweb, decimals, notice, version, twitter, & github**.
 
 The Ticker.sol contract exposes additional queries; such as: fetch all metadata, fetch token contracts on all chains, and token balance for address. TNS.sol is hosted at [tkn.eth](https://etherscan.io/address/tkn.eth#code)
 
