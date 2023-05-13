@@ -317,8 +317,27 @@ interface ITKN {
         string github;
         bytes dweb;
     }
+    struct TokenAddresses {
+        address payable arb1_address;
+        address payable avaxc_address;
+        address payable base_address;
+        address payable bsc_address;
+        address payable cro_address;
+        address payable ftm_address;
+        address payable gno_address;
+        address payable matic_address;
+        bytes near_address;
+        address payable op_address;
+        bytes sol_address;
+        bytes trx_address;
+        bytes zil_address; 
+        address payable goerli_address; 
+        address payable sepolia_address; 
+    }
     function addressFor(string calldata _name) external view returns (address);
     function infoFor(string calldata _name) external view returns (TokenInfo memory);
+    function addressesFor(string calldata _name) external view returns (TokenAddresses memory);
+    function dataFor(string calldata _name) external view returns (Metadata memory);
     function gasEfficientFetch(bytes32 namehash) external view returns (address);
     function balanceWithTicker(address user, string calldata tickerSymbol) external view returns (uint);
 }
