@@ -28,6 +28,25 @@ await provider.resolveName("uni.tkn.eth");
 ```
 {% endtab %}
 
+{% tab title="Wagmi" %}
+Fetch the mainnet contract address for 'wbtc'
+
+```javascript
+import { useEnsAddress } from 'wagmi'
+
+function App() {
+  const { data, isError, isLoading } = useEnsAddress({
+    name: 'wbtc.tkn.eth',
+  })
+
+  if (isLoading) return <div>Fetching address…</div>
+  if (isError) return <div>Error fetching address</div>
+  return <div>Address: {data}</div>
+}
+// Returns '0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599'
+```
+{% endtab %}
+
 {% tab title="Solidity" %}
 ```solidity
 pragma solidity ^0.8.4;
