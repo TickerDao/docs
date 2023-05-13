@@ -84,7 +84,7 @@ interface IERC20 {
 
 **Get single datapoint**
 
-Get one of the nine datapoints available for each token.
+Get one of the datapoints available for each token.
 
 Pulls a single datapoint, such as a name or description.
 
@@ -152,7 +152,7 @@ interface IERC20 {
 
 **Get all token info**
 
-Retrieve all nine datapoints for a token.
+Retrieve all datapoints for a token.
 
 Useful for fetching all token data in a single query.
 
@@ -170,7 +170,9 @@ let data = await tkn.infoFor("uni")
 // data.url: "https://app.uniswap.org/"
 // data.github: "Uniswap"
 // data.twitter: "uniswap"
-// data.notice: "{\"rev\":0, \"decimals\": 18}"
+// data.notice: ""
+// data.version: "0.0.3"
+// data.decimals: "18"
 
 ```
 {% endtab %}
@@ -189,7 +191,9 @@ const info = await contract.methods.infoFor("uni").call()
 // data.url: "https://app.uniswap.org/"
 // data.github: "Uniswap"
 // data.twitter: "uniswap"
-// data.notice: "{\"rev\":0, \"decimals\": 18}"
+// data.notice: ""
+// data.version: "0.0.3"
+// data.decimals: "18"
 ```
 {% endtab %}
 
@@ -220,6 +224,8 @@ interface ITicker {
 		string notice;
 		string twitter;
 		string github;
+		string decimals;
+		string version;
 	}
 	function addressFor(string calldata _name) external view returns (address);
 	function infoFor(string calldata _name) external view returns (Metadata memory);
