@@ -29,7 +29,7 @@ await provider.resolveName("uni.tkn.eth");
 {% endtab %}
 
 {% tab title="Wagmi" %}
-Fetch the mainnet contract address for 'wbtc'
+Fetch the mainnet contract address for **WBTC**
 
 ```javascript
 import { useEnsAddress } from 'wagmi'
