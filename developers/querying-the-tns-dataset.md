@@ -42,31 +42,33 @@ web3.eth.ens.getAddress('uni.tkn.eth').then(function (address) {
 ```solidity
 pragma solidity ^0.8.4;
 
-contract HelloTicker {
-    ITicker ticker;
+contract HelloTKN {
+    ITKN tkn;
     constructor() {
-        ticker = ITicker(0x8F5007bCDC1870531029C194b31AE1e6005bc30d); 
+        tkn = ITKN(0xc11BA824ab2cEA5E701831AB87ed43eb013902Dd); 
     }
     
     // Get an account's balance from a ticker symbol
     function balanceForAddress(address user, string calldata tickerSymbol) public view returns (uint) {
 	// Fetch the token contract address with ticker:
-	address contractAddress = ticker.addressFor(tickerSymbol);
+	address contractAddress = tkn.addressFor(tickerSymbol);
         IERC20 tokenContract = IERC20(contractAddress);
         return tokenContract.balanceOf(user);
     }
 }
 // Required Interfaces
-interface ITicker {
+interface ITKN {
     struct Metadata {
         address contractAddress;
-		string name;
+	string name;
         string url;
         string avatar;
         string description;
         string notice;
         string twitter;
         string github;
+        string decimals;
+	string version;
     }
     function addressFor(string calldata _name) external view returns (address);
     function infoFor(string calldata _name) external view returns (Metadata memory);
@@ -113,38 +115,40 @@ console.log(info.description)
 ```solidity
 pragma solidity ^0.8.4;
 
-contract HelloTicker {
-	ITicker ticker;
-	constructor() {
-		ticker = ITicker(0x8F5007bCDC1870531029C194b31AE1e6005bc30d); 
-	}
+contract HelloTKN {
+    ITKN tkn;
+    constructor() {
+        tkn = ITKN(0xc11BA824ab2cEA5E701831AB87ed43eb013902Dd); 
+    }
 
-    // Get a ticker's description
+    // Get a token's description
     function descriptionForTicker(string calldata tickerSymbol) public view returns (string memory description) {
-        return ticker.infoFor(tickerSymbol).description;
+        return tkn.infoFor(tickerSymbol).description;
     }
 }
 // Required Interfaces
-interface ITicker {
-	struct Metadata {
-		address contractAddress;
-		string name;
-		string url;
-		string avatar;
-		string description;
-		string notice;
-		string twitter;
-		string github;
-	}
-	function addressFor(string calldata _name) external view returns (address);
-	function infoFor(string calldata _name) external view returns (Metadata memory);
-	function gasEfficientFetch(bytes32 namehash) external view returns (address);
-	function balanceWithTicker(address user, string calldata tickerSymbol) external view returns (uint);
+interface ITKN {
+    struct Metadata {
+        address contractAddress;
+	string name;
+        string url;
+        string avatar;
+        string description;
+        string notice;
+        string twitter;
+        string github;
+        string decimals;
+	string version;
+    }
+    function addressFor(string calldata _name) external view returns (address);
+    function infoFor(string calldata _name) external view returns (Metadata memory);
+    function gasEfficientFetch(bytes32 namehash) external view returns (address);
+    function balanceWithTicker(address user, string calldata tickerSymbol) external view returns (uint);
 }
 
 interface IERC20 {
-	function balanceOf(address account) external view returns (uint256);
-	function transfer(address recipient, uint256 amount) external returns (bool);
+    function balanceOf(address account) external view returns (uint256);
+    function transfer(address recipient, uint256 amount) external returns (bool);
 } 
 ```
 {% endtab %}
@@ -201,41 +205,41 @@ const info = await contract.methods.infoFor("uni").call()
 ```solidity
 pragma solidity ^0.8.4;
 
-contract HelloTicker {
-	ITicker ticker;
-	constructor() {
-		ticker = ITicker(0x8F5007bCDC1870531029C194b31AE1e6005bc30d); 
-	}
+contract HelloTKN {
+    ITKN tkn;
+    constructor() {
+        tkn = ITKN(0xc11BA824ab2cEA5E701831AB87ed43eb013902Dd); 
+    }
 	
     // Get the full dataset for a ticker 
     function dataForTicker(string calldata tickerSymbol) public view returns (ITicker.Metadata memory info) {
-        ITicker.Metadata memory data = ticker.infoFor(tickerSymbol);
+        ITKN.Metadata memory data = tkn.infoFor(tickerSymbol);
         return data;
     }
 }
 // Required Interfaces
-interface ITicker {
-	struct Metadata {
-		address contractAddress;
-		string name;
-		string url;
-		string avatar;
-		string description;
-		string notice;
-		string twitter;
-		string github;
-		string decimals;
-		string version;
-	}
-	function addressFor(string calldata _name) external view returns (address);
-	function infoFor(string calldata _name) external view returns (Metadata memory);
-	function gasEfficientFetch(bytes32 namehash) external view returns (address);
-	function balanceWithTicker(address user, string calldata tickerSymbol) external view returns (uint);
+interface ITKN {
+    struct Metadata {
+        address contractAddress;
+	string name;
+        string url;
+        string avatar;
+        string description;
+        string notice;
+        string twitter;
+        string github;
+        string decimals;
+	string version;
+    }
+    function addressFor(string calldata _name) external view returns (address);
+    function infoFor(string calldata _name) external view returns (Metadata memory);
+    function gasEfficientFetch(bytes32 namehash) external view returns (address);
+    function balanceWithTicker(address user, string calldata tickerSymbol) external view returns (uint);
 }
 
 interface IERC20 {
-	function balanceOf(address account) external view returns (uint256);
-	function transfer(address recipient, uint256 amount) external returns (bool);
+    function balanceOf(address account) external view returns (uint256);
+    function transfer(address recipient, uint256 amount) external returns (bool);
 } 
 ```
 {% endtab %}
@@ -273,38 +277,40 @@ const uniBalance = await contract.methods.balanceWithTicker(account, "uni").call
 ```solidity
 pragma solidity ^0.8.4;
 
-contract HelloTicker {
-	ITicker ticker;
-	constructor() {
-		ticker = ITicker(0x8F5007bCDC1870531029C194b31AE1e6005bc30d); 
-	}
+contract HelloTKN {
+    ITKN tkn;
+    constructor() {
+        tkn = ITKN(0xc11BA824ab2cEA5E701831AB87ed43eb013902Dd); 
+    }
 	
     // Get the caller's balance of a token
     function myBalanceForTicker(string calldata tickerSymbol) public view returns (uint balance) {
-        return ticker.balanceWithTicker(msg.sender, tickerSymbol);
+        return tkn.balanceWithTicker(msg.sender, tickerSymbol);
     }
 }
 // Required Interfaces
-interface ITicker {
-	struct Metadata {
-		address contractAddress;
-		string name;
-		string url;
-		string avatar;
-		string description;
-		string notice;
-		string twitter;
-		string github;
-	}
-	function addressFor(string calldata _name) external view returns (address);
-	function infoFor(string calldata _name) external view returns (Metadata memory);
-	function gasEfficientFetch(bytes32 namehash) external view returns (address);
-	function balanceWithTicker(address user, string calldata tickerSymbol) external view returns (uint);
+interface ITKN {
+    struct Metadata {
+        address contractAddress;
+	string name;
+        string url;
+        string avatar;
+        string description;
+        string notice;
+        string twitter;
+        string github;
+        string decimals;
+	string version;
+    }
+    function addressFor(string calldata _name) external view returns (address);
+    function infoFor(string calldata _name) external view returns (Metadata memory);
+    function gasEfficientFetch(bytes32 namehash) external view returns (address);
+    function balanceWithTicker(address user, string calldata tickerSymbol) external view returns (uint);
 }
 
 interface IERC20 {
-	function balanceOf(address account) external view returns (uint256);
-	function transfer(address recipient, uint256 amount) external returns (bool);
+    function balanceOf(address account) external view returns (uint256);
+    function transfer(address recipient, uint256 amount) external returns (bool);
 } 
 ```
 {% endtab %}
