@@ -22,7 +22,7 @@ Useful for converting a user supplied token symbol into an actionable contract.
 
 {% tabs %}
 {% tab title="Ethers.js" %}
-```javascript
+
 await provider.resolveName("uni.tkn.eth");
 // '0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984'
 
