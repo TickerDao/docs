@@ -43,7 +43,7 @@ function App() {
   if (isError) return <div>Error fetching address</div>
   return <div>Address: {data}</div>
 }
-// Returns '0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599'
+// Returns data: '0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599'
 ```
 {% endtab %}
 
@@ -116,6 +116,12 @@ Pulls a single datapoint, such as a name or description.
 const resolver = await provider.getResolver("uni.tkn.eth");
 const description = await resolver.getText("description");
 // "Protocol used to exchange cryptocurrencies and tokens"
+```
+{% endtab %}
+
+{% tab title="Wagmi" %}
+```javascript
+// Some code
 ```
 {% endtab %}
 
