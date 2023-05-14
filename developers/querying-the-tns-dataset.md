@@ -119,12 +119,6 @@ const description = await resolver.getText("description");
 ```
 {% endtab %}
 
-{% tab title="Wagmi" %}
-```javascript
-// Some code
-```
-{% endtab %}
-
 {% tab title="Solidity" %}
 ```solidity
 pragma solidity ^0.8.4;
