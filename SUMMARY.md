@@ -2,8 +2,7 @@
 
 ## Overview
 
-* [Quickstart](README.md)
-* [Introduction](overview/introduction.md)
+* [Introduction](README.md)
 * [Links](overview/links.md)
 * [Whitepaper](overview/whitepaper.md)
 
