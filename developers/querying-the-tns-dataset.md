@@ -12,9 +12,9 @@ Descriptive metadata can be found on chain in each token's ENS resolver. Includi
 
 The TNS.sol contract exposes additional queries; such as: fetch all metadata, fetch token contracts on all chains, and token balance for address. TNS.sol is hosted at [tkn.eth](https://etherscan.io/address/tkn.eth#code)
 
-### Quickstart
+## Quickstart
 
-#### Get token contract address
+### Get token contract address
 
 Retrieves the address where the token contract resides.
 
@@ -104,7 +104,7 @@ web3.eth.ens.getAddress('uni.tkn.eth').then(function (address) {
 {% endtab %}
 {% endtabs %}
 
-#### **Get single datapoint**
+### **Get single datapoint**
 
 Get one of the datapoints available for each token.
 
@@ -175,7 +175,7 @@ console.log(info.description)
 {% endtab %}
 {% endtabs %}
 
-#### **Get all token info**
+### **Get all token info**
 
 Retrieve all datapoints for a token, excluding the sidechain contract addresses.
 
@@ -298,7 +298,7 @@ const info = await contract.methods.infoFor("uni").call()
 {% endtab %}
 {% endtabs %}
 
-#### **Get all token info and sidechain contract addresses**
+### **Get all token info and sidechain contract addresses**
 
 Retrieve all token info and it's sidechain contract addresses.
 
@@ -476,7 +476,7 @@ interface IERC20 {
 {% endtab %}
 {% endtabs %}
 
-#### **Get all sidechain contract addresses**
+### **Get all sidechain contract addresses**
 
 Retrieve all token sidechain contract addresses.
 
@@ -630,7 +630,7 @@ interface IERC20 {
 {% endtab %}
 {% endtabs %}
 
-#### **Get tokens owned by an address**
+### **Get tokens owned by an address**
 
 Lookup how many tokens an address owns, using a token symbol.
 
@@ -702,7 +702,7 @@ interface IERC20 {
 {% endtab %}
 {% endtabs %}
 
-#### Get all TKN tokens
+### Get all TKN tokens
 
 There are multiple ways to fetch the complete list of tokens
 
