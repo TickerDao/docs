@@ -35,12 +35,12 @@
   * [Hub-Spoke Synchronization](architecture/storage/hub-spoke-synchronization.md)
   * [Data Field Storage](architecture/storage/data-field-storage.md)
 
-## TKN Token
+## Coming Soon
 
-* [Overview](tkn-token/overview.md)
-* [Incentive Design](tkn-token/incentive-design.md)
-* [Staking](tkn-token/staking.md)
-* [Governance](tkn-token/governance.md)
+* [Overview](coming-soon/overview.md)
+* [Incentive Design](coming-soon/incentive-design.md)
+* [Staking](coming-soon/staking.md)
+* [Governance](coming-soon/governance.md)
 
 ## Community
 
