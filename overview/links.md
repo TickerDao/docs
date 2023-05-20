@@ -1,6 +1,6 @@
 # Links
 
-### App
+### Application
 
 {% embed url="https://tkn.xyz" %}
 tkn.xyz
