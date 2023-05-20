@@ -1,14 +1,12 @@
 # Links
 
-### Website
+### App
 
 {% embed url="https://tkn.xyz" %}
 tkn.xyz
 {% endembed %}
 
-{% embed url="https://tkn.eth.limo" %}
-tkn.eth
-{% endembed %}
+TKN App also published to the dweb: [https://tkn.eth.limo](https://tkn.eth.limo)
 
 ### iOS Application
 
