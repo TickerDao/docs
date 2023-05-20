@@ -127,3 +127,7 @@ Future datapoints that will be added to the dataset
 
 The total number of tokens created for a project\
 **Example:** 10000000
+
+## `abi`
+
+The ABI interface for the token contract
