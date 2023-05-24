@@ -10,4 +10,4 @@ description: Contributors and supporters
 
 ### Special Thanks
 
-Dollar.eth, ENS Delegates, Optimism public goods funding, Andrew O'Brien, eth.limo
+Dollar.eth, ENS Delegates, Optimism Public Goods funding, Andrew O'Brien, eth.limo
