@@ -47,6 +47,7 @@
 * [Roadmap](community/roadmap.md)
 * [Grants](community/grants.md)
 * [Partners](community/partners.md)
+* [Acknowledgements](community/acknowledgements.md)
 
 ***
 
