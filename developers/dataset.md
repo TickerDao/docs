@@ -126,6 +126,31 @@ Future datapoints that will be added to the dataset
 The total number of tokens created for a project\
 **Example:** 10000000
 
+## `chain_id`
+
+The chain id, if the token represents an EVM network\
+**Example:** 10
+
+## `discord`
+
+The invite string for a project's discord server\
+**Example:** [dEc9GHjKUP](https://discord.com/invite/dEc9GHjKUP)
+
+## `forum`
+
+The URL for a project's forum\
+**Example:** [discuss.ens.domains](https://discuss.ens.domains/)
+
+## `governance`
+
+The URL for the Tally.xyz or other onchain voting interface\
+**Example:** [tally.xyz/gov/ens](https://www.tally.xyz/gov/ens)
+
+## `snapshot`
+
+The URL for the Snapshot.org or other off-chain voting interface\
+**Example:** [snapshot.org/#/ens.eth](https://snapshot.org/#/ens.eth)
+
 ## `abi`
 
 The ABI interface for the token contract
