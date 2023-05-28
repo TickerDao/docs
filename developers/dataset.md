@@ -119,7 +119,7 @@ Ziliqa | `zil_address`\
 
 ## Upcoming Datapoints:
 
-Future datapoints that will be added to the dataset
+Future datapoints that will be added to the dataset. Additional datapoints can be authorized through a governance vote.
 
 ## `tokenSupply`
 
