@@ -126,6 +126,12 @@ Future datapoints that will be added to the dataset. Additional datapoints can b
 The total number of tokens created for a project\
 **Example:** 10000000
 
+## `circulatingSupply`
+
+The total number of tokens in circulation \
+_This may be defined by a function in future versions of the resolver contract_\
+**Example:** 7800000
+
 ## `chain_id`
 
 The chain id, if the token represents an EVM network\
