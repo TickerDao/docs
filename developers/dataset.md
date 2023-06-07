@@ -160,3 +160,8 @@ The URL for the Snapshot.org or other off-chain voting interface\
 ## `abi`
 
 The ABI interface for the token contract
+
+## `governance`
+
+The contract address for the governance contract\
+**Example:** 0x690e775361AD66D1c4A25d89da9fCd639F5198eD
