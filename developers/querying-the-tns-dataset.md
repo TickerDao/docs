@@ -108,6 +108,8 @@ Get one of the datapoints available for each token.
 
 Pulls a single datapoint, such as a name or description.
 
+To see the available data types visit: [https://docs.tkn.xyz/developers/dataset](https://docs.tkn.xyz/developers/dataset)
+
 {% tabs %}
 {% tab title="Ethers.js" %}
 ```javascript
