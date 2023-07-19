@@ -476,6 +476,13 @@ interface IERC20 {
 {% endtab %}
 {% endtabs %}
 
+**Decoding non-EVM and `dweb` responses:**\
+Non-EVM contract addresses can be decoded with [**https://www.npmjs.com/package/@ensdomains/address-encoder**](https://www.npmjs.com/package/@ensdomains/address-encoder)\
+`addressEncoder.formatsByName['SOL'].encoder(Buffer.from(tokenData.sol_address.substring(2), 'hex'))`\
+\
+And the `dweb` IPFS CID can be decoded with\
+[**https://github.com/pldespaigne/content-hash#contenthashdecode-contenthash----string**](https://github.com/pldespaigne/content-hash#contenthashdecode-contenthash----string)
+
 ### **Get all sidechain contract addresses**
 
 Retrieve all token sidechain contract addresses.
@@ -629,6 +636,10 @@ interface IERC20 {
 ```
 {% endtab %}
 {% endtabs %}
+
+**Decoding non-EVM contract addresses:**\
+Non-EVM contract addresses can be decoded with [**https://www.npmjs.com/package/@ensdomains/address-encoder**](https://www.npmjs.com/package/@ensdomains/address-encoder)\
+`addressEncoder.formatsByName['SOL'].encoder(Buffer.from(tokenData.sol_address.substring(2), 'hex'))`
 
 ### **Get tokens owned by an address**
 
