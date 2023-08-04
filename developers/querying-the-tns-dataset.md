@@ -718,9 +718,11 @@ interface IERC20 {
 There are multiple ways to fetch the complete list of tokens
 
 1. **Registry.tkn.eth:** a simple JSON array with the symbols for all listed tokens. The current source of truth for TKN listings. Can be fetched with an IPFS dweb resolver, or eth.limo. [https://registry.tkn.eth.limo/](https://registry.tkn.eth.limo/)
-2. **TheGraph:** TKN now has it's very own subgraph. Can conveniently produce all tokens and metadata in a single query. [https://thegraph.com/hosted-service/subgraph/mike-data-nexus/tkn-\_sg](https://thegraph.com/hosted-service/subgraph/mike-data-nexus/tkn-\_sg)\
-   \
-   Use this TKN Subgraph query to fetch all tokens and metadata at once:
+2. **TheGraph:** TKN now has it's very own subgraph. Can conveniently produce all tokens and metadata in a single query.&#x20;
+
+{% embed url="https://thegraph.com/hosted-service/subgraph/mike-data-nexus/tkn-_sg" %}
+
+Use this TKN Subgraph query to fetch all tokens and metadata at once:
 
 ```graphql
 {
