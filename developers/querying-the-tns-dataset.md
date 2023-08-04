@@ -718,27 +718,60 @@ interface IERC20 {
 There are multiple ways to fetch the complete list of tokens
 
 1. **Registry.tkn.eth:** a simple JSON array with the symbols for all listed tokens. The current source of truth for TKN listings. Can be fetched with an IPFS dweb resolver, or eth.limo. [https://registry.tkn.eth.limo/](https://registry.tkn.eth.limo/)
-2. **TheGraph:** Use the ENS subgraph to fetch all of the subdomains of `tkn.eth`. (i.e. `wbtc.tkn.eth`, & `doge.tkn.eth`) Can conveniently produce tokens and metadata in a single query. [https://thegraph.com/hosted-service/subgraph/ensdomains/ens](https://thegraph.com/hosted-service/subgraph/ensdomains/ens)\
+2. **TheGraph:** TKN now has it's very own subgraph. Can conveniently produce all tokens and metadata in a single query. [https://thegraph.com/hosted-service/subgraph/mike-data-nexus/tkn-\_sg](https://thegraph.com/hosted-service/subgraph/mike-data-nexus/tkn-\_sg)\
    \
-   Use this ENS Subgraph query to fetch all TKN tokens with their resolver contract addresses:
+   Use this TKN Subgraph query to fetch all tokens and metadata at once:
 
-{% code fullWidth="true" %}
-```
+```graphql
 {
-    resolvers(where: { domain_:{ name_ends_with: "tkn.eth"}, texts_contains: ["version"] } ) {
-	domain {
-            labelName
-            name
-            labelhash
-        }
-        contentHash
-        texts
+  domains(
+    where: {name_ends_with: ".tkn.eth"}
+  ) {
+    id
+    name
+    labelName
+    resolver {
+      version
+      url
+      description
+      twitter
+      github
+      discord
+      avatar
+      addresses {
         address
+        coinType
+      }
     }
+  }
 }
 ```
-{% endcode %}
 
-Note: the ENS subgraph does not currently return resolver data (`description`, `avatar`, etc.), consider using `.dataFor('usdc')` [https://etherscan.io/address/tkn.eth#readContract](https://etherscan.io/address/tkn.eth#readContract)
+And this query can be used to fetch a single token:
+
+```graphql
+query ($Symbol: String = "weth") {
+  domains(
+    where: {name_ends_with: ".tkn.eth", name_starts_with: $Symbol}
+  ) {
+    id
+    name
+    labelName
+    resolver {
+      version
+      url
+      description
+      twitter
+      github
+      discord
+      avatar
+      addresses {
+        address
+        coinType
+      }
+    }
+  }
+}
+```
 
 3. **TokenList:** Tokenlists.org formatted list. Published at `list.tkn.eth`. View at: [https://tokenlists.org/token-list?url=list.tkn.eth](https://tokenlists.org/token-list?url=list.tkn.eth)
