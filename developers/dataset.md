@@ -161,6 +161,10 @@ The URL for the Snapshot.org or other off-chain voting interface\
 
 The ABI interface for the token contract
 
+## `git`
+
+Host agnostic source code url (Gitlab, Bitbucket, Radicle, ect)
+
 ## `governance`
 
 The contract address for the governance contract\
