@@ -1,7 +1,9 @@
 ---
-description: Whitepaper
+description: 'Link to the TKN Whitepaper:'
 ---
 
 # Whitepaper
 
-Coming soon.
+## [Whitepaper.tkn.xyz](whitepaper.md#https-whitepaper.tkn.xyz)
+
+##
