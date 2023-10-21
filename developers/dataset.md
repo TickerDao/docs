@@ -68,7 +68,7 @@ X.0.0 is increased when a ticker ($XXX) is changed, \
 
 If a more significant number is changed, all the numbers under it are reset. The starting version is 0.0.1
 
-**Example:** 0.1.3 - The first version of a token, on it's second token contract address, under which, the metadata has been updated twice.
+**Example:** 0.1.3 - The first version of a token, on its second token contract address, under which, the metadata has been updated twice.
 
 ## Sidechain Addresses
 
@@ -114,7 +114,7 @@ Solana | `sol_address`\
 Tron | `trx_address`\
 **Example:** TXpw8XeWYeTUd4quDskoUqeQPowRh4jY65
 
-Ziliqa | `zil_address`\
+Zilliqa | `zil_address`\
 **Example:** zil1wha8mzaxhm22dpm5cav2tepuldnr8kwkvmqtjq
 
 ## Upcoming Datapoints:
