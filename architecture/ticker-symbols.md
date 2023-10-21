@@ -10,7 +10,7 @@ description: Ticker Symbols
 
 
 
-Symbols are primarily meant for communities. Each community can then can decide to host a user space within their symbol and set their own assignment rules along with their general strategy.
+Symbols are primarily meant for communities. Each community can then decide to host a user space within their symbol and set their own assignment rules along with their general strategy.
 
 
 
