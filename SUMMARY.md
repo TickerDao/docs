@@ -10,6 +10,7 @@
 
 * [Dataset](developers/dataset.md)
 * [Querying the Dataset](developers/querying-the-tns-dataset.md)
+* [Supported Chains](developers/supported-chains.md)
 
 ## Usage
 
