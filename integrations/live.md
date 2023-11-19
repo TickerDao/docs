@@ -14,7 +14,7 @@ description: Live integrations
 
 <figure><img src="../.gitbook/assets/Screenshot 2023-11-19 at 1.51.13 AM.png" alt=""><figcaption><p><a href="https://migratooor.com/tokenlistooor/tns">https://migratooor.com/tokenlistooor/tns</a></p></figcaption></figure>
 
-<figure><picture><source srcset="../.gitbook/assets/logo-wide-gradient-white.png" media="(prefers-color-scheme: dark)"><img src="../.gitbook/assets/Screenshot 2023-11-19 at 2.18.03 AM.png" alt=""></picture><figcaption><p><a href="https://sablier.com/">https://sablier.com/</a></p></figcaption></figure>
+<figure><picture><source srcset="../.gitbook/assets/logo-wide-gradient-white.png" media="(prefers-color-scheme: dark)"><img src="../.gitbook/assets/Screenshot 2023-11-19 at 2.18.03 AM.png" alt="" width="375"></picture><figcaption><p><a href="https://sablier.com/">https://sablier.com/</a></p></figcaption></figure>
 
 ### ENS Support
 
