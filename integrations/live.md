@@ -18,4 +18,4 @@ description: Live integrations
 
 ### ENS Support
 
-<figure><img src="../.gitbook/assets/Screenshot 2023-11-19 at 1.58.17 AM.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Screenshot 2023-11-19 at 2.00.36 AM.png" alt=""><figcaption></figcaption></figure>
