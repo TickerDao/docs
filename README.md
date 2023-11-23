@@ -4,7 +4,7 @@ description: Overview of TokenDAO
 
 # Introduction
 
-TokenDAO helps the ecosystem define a shared `token` data type and facilitate the creation of a shared dataset containing important information about each token. Token data stored in TokenDAO can be integrated in a permissionless manner and used in any context. Wallets, web apps, smart contracts, token communities can now exercise direct control over the updates they wish to see in this shared token dataset, define open and transparent update processes, set validity durations on data to maintain this shared dataset.
+TokenDAO helps the ecosystem define a shared `token` data type and facilitates the creation of a shared dataset containing important information about each token. Token data stored in TokenDAO can be integrated in a permissionless manner and used in any context. Wallets, web apps, smart contracts, token communities can now exercise direct control over the updates they wish to see in this shared token dataset, define open and transparent update processes, set validity durations on data to maintain this shared dataset.
 
 Tickers are unique and short symbols set by TokenDAO within the shared dataset for each token community. TokenDAO believes that communities should naturally own their symbols together unlike an ENS name which has to be owned. Even shared ownership of ENS names with multi-sig wallets is not fool-proof. Subscription fees, domain renewals, expiry dates to allow others to grab your domain name should not apply to important symbols like Tickers.
 
