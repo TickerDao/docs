@@ -58,6 +58,16 @@ The name of the GitHub organization used by the project\
 A decentralized IPFS, IPNS, Swarm, or Arweave hash, used by browsers to resolve web pages with decentralized hosting.\
 **Example:** bafybeiaqs3f3wcfln2ieej2wk6emuqcnc6rixahiv4ruqvjlmxlrkhaqdq
 
+## `chainID`
+
+If this token represents an EVM network, return the [chain ID](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-155.md)\
+**Example:** 10 (Optimism)
+
+## `coinType`
+
+If this token represents a non-EVM network, return the [SLIP44](https://github.com/satoshilabs/slips/blob/master/slip-0044.md) ID\
+**Example:** 501 (Solana)
+
 ## `version`
 
 A monotonically increasing versioning identifier, that increases when a token's metadata is updated.&#x20;
