@@ -86,8 +86,8 @@ The following are additional datapoints that are returned by the reverse resolve
 
 ## `symbol`
 
-(retur\
-**Example:** 501 (Solana)
+The token symbol for the queried address\
+**Example: MKR**
 
 ## Sidechain Addresses
 
