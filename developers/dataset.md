@@ -108,6 +108,8 @@ Avalanche (C-Chain) | `avaxc_address`
 
 Binance Smart Chain | `bsc_address`
 
+Base Network | `base_address`
+
 Cronos | `cro_address`
 
 Fantom | `ftm_address`
