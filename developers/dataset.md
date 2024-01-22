@@ -80,6 +80,15 @@ If a more significant number is changed, all the numbers under it are reset. The
 
 **Example:** 0.1.3 - The first version of a token, on it's second token contract address, under which, the metadata has been updated twice.
 
+## Reverse Resolver:
+
+The following are additional datapoints that are returned by the reverse resolver
+
+## `symbol`
+
+(retur\
+**Example:** 501 (Solana)
+
 ## Sidechain Addresses
 
 The token's contract addresses for EVM and non-EVM chains.&#x20;
@@ -126,6 +135,15 @@ Tron | `trx_address`\
 
 Ziliqa | `zil_address`\
 **Example:** zil1wha8mzaxhm22dpm5cav2tepuldnr8kwkvmqtjq
+
+## Reverse Resolver:
+
+The following are additional datapoints that are returned by the reverse resolver
+
+## `symbol`
+
+The token symbol for the queried address\
+**Example:** MKR
 
 ## Upcoming Datapoints:
 
