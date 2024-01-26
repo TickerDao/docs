@@ -15,7 +15,7 @@ A short string containing the name of the project\
 
 ## `description`
 
-A succinct, one sentence description of the project\
+A succinct, one sentence description of the project. The description should be neutral and non-promotional in tone. \
 **Example:** `Wrapped bitcoin token with BTC held in reserve`
 
 ## `avatar`
