@@ -25,24 +25,6 @@
 * [Future](integrations/future.md)
 * [Bounties](integrations/bounties.md)
 
-## Architecture
-
-* [System Overview](architecture/system-overview.md)
-* [Ticker Symbols](architecture/ticker-symbols.md)
-* [Data Fields](architecture/data-fields.md)
-* [Storage](architecture/storage/README.md)
-  * [Hub](architecture/storage/hub.md)
-  * [Spokes](architecture/storage/spokes.md)
-  * [Hub-Spoke Synchronization](architecture/storage/hub-spoke-synchronization.md)
-  * [Data Field Storage](architecture/storage/data-field-storage.md)
-
-## Coming Soon
-
-* [Overview](tkn-token/overview.md)
-* [Incentive Design](tkn-token/incentive-design.md)
-* [Staking](tkn-token/staking.md)
-* [Governance](tkn-token/governance.md)
-
 ## Community
 
 * [Roadmap](community/roadmap.md)
