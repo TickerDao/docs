@@ -195,7 +195,7 @@ The ABI interface for the token contract
 
 Host agnostic source code url (Gitlab, Bitbucket, Radicle, ect)
 
-## `governance`
+## `governanceContract`
 
 The contract address for the governance contract\
 **Example:** 0x690e775361AD66D1c4A25d89da9fCd639F5198eD
