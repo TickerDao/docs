@@ -102,9 +102,17 @@ web3.eth.ens.getAddress('uni.tkn.eth').then(function (address) {
 {% endtab %}
 {% endtabs %}
 
+### **Get token by contract address**
+
+Reverse resolution by token contract address is now available
+
+Query `<tokenAddress>.<chain>.tkn.eth` to fetch the metadata for that token
+
+**Example:** [0x78b3C724A2F663D11373C4a1978689271895256f.base.tkn.eth](https://app.ens.domains/0x78b3c724a2f663d11373c4a1978689271895256f.base.tkn.eth) ($TKN on Base) will resolve the data for the $TKN token
+
 ### **Get single datapoint**
 
-Get one of the datapoints available for each token.
+Get one of the datapoints available for each token. &#x20;
 
 Pulls a single datapoint, such as a name or description.
 
