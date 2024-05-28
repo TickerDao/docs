@@ -58,7 +58,7 @@ The name of the GitHub organization used by the project\
 A decentralized IPFS, IPNS, Swarm, or Arweave hash, used by browsers to resolve web pages with decentralized hosting.\
 **Example:** bafybeiaqs3f3wcfln2ieej2wk6emuqcnc6rixahiv4ruqvjlmxlrkhaqdq
 
-## `chainID`
+## `chainId`
 
 If this token represents an EVM network, return the [chain ID](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-155.md)\
 **Example:** 10 (Optimism)
@@ -162,7 +162,7 @@ The total number of tokens in circulation \
 _This may be defined by a function in future versions of the resolver contract_\
 **Example:** 7800000
 
-## `chain_id`
+## `chainId`
 
 The chain id, if the token represents an EVM network\
 **Example:** 10
