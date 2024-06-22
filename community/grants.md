@@ -1,7 +1,0 @@
----
-description: Grants
----
-
-# Grants
-
-Grants

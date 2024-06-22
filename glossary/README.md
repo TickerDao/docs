@@ -1,7 +1,0 @@
----
-description: Glossary
----
-
-# Glossary
-
-Glossary
