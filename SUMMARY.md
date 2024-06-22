@@ -2,13 +2,13 @@
 
 ## Developers
 
-* [Dataset](README.md)
-* [Querying the Dataset](developers/querying-the-tns-dataset.md)
+* [Querying the Dataset](README.md)
+* [Dataset](<README (1).md>)
 * [Supported Chains](developers/supported-chains.md)
 
 ## Overview
 
-* [Introduction](<README (1).md>)
+* [Introduction](<README (1) (1).md>)
 * [Links](overview/links.md)
 * [Whitepaper](overview/whitepaper.md)
 
