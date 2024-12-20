@@ -3,6 +3,7 @@
 ## Developers
 
 * [Querying the Dataset](README.md)
+* [Using the v3 Dataset](v3-dataset.md)
 * [Dataset](<README (1).md>)
 * [Supported Chains](developers/supported-chains.md)
 
